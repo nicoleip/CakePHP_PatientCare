@@ -115,9 +115,7 @@ class UsersController extends AppController
 
                 $this->redirect($this->Auth->redirectUrl());
             } else {
-
             // Bad login
-
             $this->Flash->error('Incorrect login');
             }
 
