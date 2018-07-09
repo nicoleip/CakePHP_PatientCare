@@ -37,8 +37,7 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Patient Id') ?></th>
-                <th scope="col"><?= __('Doctor Id') ?></th>
+                <th scope="col"><?= __('Patient Id') ?></th>                
                 <th scope="col"><?= __('Appointment Date') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
@@ -47,8 +46,7 @@
             <?php foreach ($doctor->appointments as $appointments): ?>
             <tr>
                 <td><?= h($appointments->id) ?></td>
-                <td><?= h($appointments->patient_id) ?></td>
-                <td><?= h($appointments->doctor_id) ?></td>
+                <td><?= $this->Format->getName($appointments->patient_id, 'patients') ?></td>                
                 <td><?= h($appointments->appointment_date) ?></td>
                 <td><?= h($appointments->created) ?></td>
                 <td><?= h($appointments->modified) ?></td>
